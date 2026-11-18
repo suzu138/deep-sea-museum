@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEEP SEA MUSEUM</title>
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+</head>
+
+<body>
+<a-scene
+  background="color: #00152A"
+  fog="type: linear; color: #00152A; near: 5; far: 35"
+  renderer="antialias: true"
+  vr-mode-ui="enabled: true">
+
+  <!-- 背景 -->
+  <a-sky color="#00152A"></a-sky>
+
+  <!-- 海底 -->
+  <a-plane position="0 -2 0"
+    rotation="-90 0 0"
+    width="100" height="100"
+    color="#063B50">
+  </a-plane>
+
+  <!-- 海底の岩 -->
+  <a-sphere position="-4 -1.7 -5"
+    scale="1.5 0.5 1"
+    color="#123B50"></a-sphere>
+  <a-sphere position="4 -1.7 -7"
+    scale="2 0.6 1.3"
+    color="#123B50"></a-sphere>
+  <a-sphere position="0 -1.8 -11"
+    scale="2 0.4 1"
+    color="#16455B"></a-sphere>
+
+
+
+
+
+<!-- クラゲ1：水色クラゲ -->
+<a-entity position="-3 2 -5"
+  animation="property: position; to: -3 2.8 -5; dur: 3000; dir: alternate; loop: true">
+
+  <!-- 傘：上半分だけの球体 -->
+  <a-sphere
+    radius="0.65"
+    theta-length="90"
+    color="#62E8FF"
+    material="emissive: #168EBD; emissiveIntensity: 0.5"
+    segments-width="48"
+    segments-height="24">
+  </a-sphere>
+
+  <!-- 触手：傘の底面から伸ばす -->
+  <a-cylinder position="-0.35 -0.45 0"
+    radius="0.018" height="0.95"
+    color="#62E8FF"></a-cylinder>
+
+  <a-cylinder position="-0.18 -0.5 0.05"
+    radius="0.018" height="1.05"
+    color="#62E8FF"></a-cylinder>
+
+  <a-cylinder position="0 -0.55 0"
+    radius="0.018" height="1.15"
+    color="#62E8FF"></a-cylinder>
+
+  <a-cylinder position="0.18 -0.5 -0.05"
+    radius="0.018" height="1.05"
+    color="#62E8FF"></a-cylinder>
+
+  <a-cylinder position="0.35 -0.45 0.05"
+    radius="0.018" height="0.95"
+    color="#62E8FF"></a-cylinder>
+
+  <!-- 長い口腕 -->
+  <a-cylinder position="-0.08 -0.75 0.1"
+    radius="0.035" height="1.4"
+    color="#A4F5FF"></a-cylinder>
+
+  <a-cylinder position="0.08 -0.75 -0.1"
+    radius="0.035" height="1.4"
+    color="#A4F5FF"></a-cylinder>
+
+</a-entity>
+
+
+
+<!-- クラゲ2：紫クラゲ -->
+<a-entity position="3 3 -8"
+  animation="property: position; to: 3 3.8 -8; dur: 4000; dir: alternate; loop: true">
+
+  <!-- 傘 -->
+  <a-sphere
+    radius="0.5"
+    theta-length="90"
+    color="#C18BFF"
+    material="emissive: #7942C9; emissiveIntensity: 0.8"
+    segments-width="48"
+    segments-height="24">
+  </a-sphere>
+
+  <!-- 触手 -->
+  <a-cylinder position="-0.27 -0.35 0"
+    radius="0.016" height="0.75" color="#C18BFF"></a-cylinder>
+  <a-cylinder position="-0.13 -0.4 0.04"
+    radius="0.016" height="0.85" color="#C18BFF"></a-cylinder>
+  <a-cylinder position="0 -0.43 0"
+    radius="0.016" height="0.9" color="#C18BFF"></a-cylinder>
+  <a-cylinder position="0.13 -0.4 -0.04"
+    radius="0.016" height="0.85" color="#C18BFF"></a-cylinder>
+  <a-cylinder position="0.27 -0.35 0.04"
+    radius="0.016" height="0.75" color="#C18BFF"></a-cylinder>
+
+  <!-- 長い口腕 -->
+  <a-cylinder position="-0.06 -0.65 0.08"
+    radius="0.03" height="1.1" color="#D9B9FF"></a-cylinder>
+  <a-cylinder position="0.06 -0.65 -0.08"
+    radius="0.03" height="1.1" color="#D9B9FF"></a-cylinder>
+
+</a-entity>
+
+
+<!-- クラゲ3：ピンククラゲ -->
+<a-entity position="1 1 -12"
+  animation="property: position; to: 1 1.7 -12; dur: 3500; dir: alternate; loop: true">
+
+  <!-- 傘 -->
+  <a-sphere
+    radius="0.4"
+    theta-length="90"
+    color="#FF9BD5"
+    material="emissive: #C34C94; emissiveIntensity: 0.7"
+    segments-width="48"
+    segments-height="24">
+  </a-sphere>
+
+  <!-- 触手 -->
+  <a-cylinder position="-0.22 -0.28 0"
+    radius="0.014" height="0.6" color="#FF9BD5"></a-cylinder>
+  <a-cylinder position="-0.11 -0.32 0.03"
+    radius="0.014" height="0.7" color="#FF9BD5"></a-cylinder>
+  <a-cylinder position="0 -0.35 0"
+    radius="0.014" height="0.75" color="#FF9BD5"></a-cylinder>
+  <a-cylinder position="0.11 -0.32 -0.03"
+    radius="0.014" height="0.7" color="#FF9BD5"></a-cylinder>
+  <a-cylinder position="0.22 -0.28 0.03"
+    radius="0.014" height="0.6" color="#FF9BD5"></a-cylinder>
+
+  <!-- 長い口腕 -->
+  <a-cylinder position="-0.05 -0.52 0.06"
+    radius="0.025" height="0.9" color="#FFD0EA"></a-cylinder>
+  <a-cylinder position="0.05 -0.52 -0.06"
+    radius="0.025" height="0.9" color="#FFD0EA"></a-cylinder>
+
+</a-entity>
+
+
+ 
+<!-- 魚1：水色の魚 -->
+<a-entity position="-5 0 -9"
+  animation="property: position; from: -5 0 -9; to: 5 0 -9; dur: 10000; dir: alternate; loop: true">
+
+  <!-- 胴体 -->
+  <a-sphere
+    scale="0.75 0.4 0.3"
+    color="#42D9E8">
+  </a-sphere>
+
+  <!-- 尾びれ -->
+  <a-cone position="-0.75 0 0"
+    radius-bottom="0.28"
+    radius-top="0"
+    height="0.5"
+    rotation="0 0 90"
+    color="#42D9E8">
+  </a-cone>
+
+  <!-- 背びれ -->
+  <a-cone position="-0.05 0.35 0"
+    radius-bottom="0.18"
+    radius-top="0"
+    height="0.35"
+    color="#42D9E8">
+  </a-cone>
+
+  <!-- 胸びれ -->
+  <a-cone position="0.1 -0.15 0.25"
+    radius-bottom="0.13"
+    radius-top="0"
+    height="0.3"
+    rotation="90 0 0"
+    color="#20A9C8">
+  </a-cone>
+
+  <!-- 目 -->
+  <a-sphere position="0.48 0.1 0.25"
+    radius="0.07" color="white"></a-sphere>
+  <a-sphere position="0.51 0.1 0.3"
+    radius="0.035" color="#00152A"></a-sphere>
+
+</a-entity>
+
+<!-- 魚2：オレンジの魚 -->
+<a-entity position="5 -0.3 -13"
+  animation="property: position; from: 5 -0.3 -13; to: -4 -0.3 -13; dur: 13000; dir: alternate; loop: true">
+
+  <!-- 胴体 -->
+  <a-sphere
+    scale="0.6 0.35 0.27"
+    color="#FFB45C">
+  </a-sphere>
+
+  <!-- 尾びれ -->
+  <a-cone position="-0.6 0 0"
+    radius-bottom="0.24"
+    radius-top="0"
+    height="0.45"
+    rotation="0 0 90"
+    color="#FFB45C">
+  </a-cone>
+
+  <!-- 背びれ -->
+  <a-cone position="-0.05 0.3 0"
+    radius-bottom="0.15"
+    radius-top="0"
+    height="0.3"
+    color="#FFB45C">
+  </a-cone>
+
+  <!-- 目 -->
+  <a-sphere position="0.4 0.08 0.22"
+    radius="0.06" color="white"></a-sphere>
+  <a-sphere position="0.43 0.08 0.26"
+    radius="0.03" color="#00152A"></a-sphere>
+
+</a-entity>
+
+  <!-- サンゴ -->
+  <a-cylinder position="-4 -0.9 -6"
+    radius="0.15" height="1.8"
+    color="#E17D9D" rotation="0 0 -20"></a-cylinder>
+  <a-cylinder position="-4.3 -0.7 -6"
+    radius="0.1" height="1.2"
+    color="#E17D9D" rotation="0 0 30"></a-cylinder>
+  <a-cylinder position="4 -0.9 -5"
+    radius="0.12" height="1.8"
+    color="#FF9D7B" rotation="0 0 20"></a-cylinder>
+  <a-cylinder position="4.3 -0.8 -5"
+    radius="0.1" height="1.2"
+    color="#FF9D7B" rotation="0 0 -35"></a-cylinder>
+
+ 
+
+
+<!-- 海藻1 -->
+<a-entity position="-2 -1.9 -5"
+  animation="property: rotation; from: 0 0 -4; to: 0 0 4; dur: 3500; dir: alternate; loop: true">
+
+  <!-- 茎 -->
+  <a-cylinder position="0 0.8 0"
+    radius="0.045" height="1.6"
+    color="#168C78"></a-cylinder>
+
+  <!-- 葉1：左 -->
+  <a-sphere position="-0.22 0.55 0"
+    scale="0.22 0.48 0.07"
+    rotation="0 0 35"
+    color="#24B58C"></a-sphere>
+
+  <!-- 葉2：右 -->
+  <a-sphere position="0.22 1.0 0"
+    scale="0.2 0.5 0.07"
+    rotation="0 0 -35"
+    color="#32C49B"></a-sphere>
+
+  <!-- 葉3：左上 -->
+  <a-sphere position="-0.18 1.35 0"
+    scale="0.17 0.4 0.06"
+    rotation="0 0 35"
+    color="#168C78"></a-sphere>
+
+</a-entity>
+
+
+<!-- 海藻2 -->
+<a-entity position="2 -1.9 -7"
+  animation="property: rotation; from: 0 0 4; to: 0 0 -4; dur: 4000; dir: alternate; loop: true">
+
+  <a-cylinder position="0 0.65 0"
+    radius="0.04" height="1.3"
+    color="#087F70"></a-cylinder>
+
+  <a-sphere position="-0.18 0.45 0"
+    scale="0.18 0.4 0.06"
+    rotation="0 0 35"
+    color="#25A989"></a-sphere>
+
+  <a-sphere position="0.18 0.85 0"
+    scale="0.18 0.42 0.06"
+    rotation="0 0 -35"
+    color="#32C49B"></a-sphere>
+
+  <a-sphere position="-0.12 1.1 0"
+    scale="0.15 0.3 0.05"
+    rotation="0 0 35"
+    color="#168C78"></a-sphere>
+
+</a-entity>
+
+
+<!-- 海藻3 -->
+<a-entity position="5 -1.9 -9"
+  animation="property: rotation; from: 0 0 -4; to: 0 0 4; dur: 3000; dir: alternate; loop: true">
+
+  <a-cylinder position="0 0.75 0"
+    radius="0.045" height="1.5"
+    color="#168C78"></a-cylinder>
+
+  <a-sphere position="-0.2 0.5 0"
+    scale="0.2 0.45 0.06"
+    rotation="0 0 35"
+    color="#24B58C"></a-sphere>
+
+  <a-sphere position="0.2 0.95 0"
+    scale="0.2 0.45 0.06"
+    rotation="0 0 -35"
+    color="#32C49B"></a-sphere>
+
+  <a-sphere position="-0.15 1.3 0"
+    scale="0.16 0.35 0.05"
+    rotation="0 0 35"
+    color="#168C78"></a-sphere>
+
+</a-entity>
+
+
+
+
+  <!-- 気泡 -->
+  <a-sphere position="-2 -1 -4" radius="0.07"
+    color="#A4F5FF" opacity="0.6"
+    animation="property: position; to: -2 4 -4; dur: 6000; loop: true"></a-sphere>
+  <a-sphere position="2 -1 -6" radius="0.05"
+    color="#A4F5FF" opacity="0.6"
+    animation="property: position; to: 2 4 -6; dur: 8000; loop: true"></a-sphere>
+  <a-sphere position="0 -1 -9" radius="0.08"
+    color="#A4F5FF" opacity="0.6"
+    animation="property: position; to: 0 4 -9; dur: 7000; loop: true"></a-sphere>
+
+
+<!-- 照明：海中全体の明るさ -->
+<a-light
+  type="ambient"
+  color="#7899C9"
+  intensity="0.9">
+</a-light>
+
+<!-- 上から差し込むスポットライト1 -->
+<a-entity position="0 7 -5"
+  rotation="-90 0 0"
+  light="type: spot; color: #70DFFF; intensity: 2.5; angle: 35; penumbra: 0.8; distance: 18">
+</a-entity>
+
+<!-- 上から差し込むスポットライト2 -->
+<a-entity position="-5 6 -10"
+  rotation="-90 0 0"
+  light="type: spot; color: #388DFF; intensity: 2; angle: 30; penumbra: 0.8; distance: 16">
+</a-entity>
+
+<!-- クラゲ周辺の光 -->
+<a-light
+  type="point"
+  position="-3 2 -5"
+  color="#36DFFF"
+  intensity="0.8"
+  distance="6">
+</a-light>
+
+<a-light
+  type="point"
+  position="3 3 -8"
+  color="#A66BFF"
+  intensity="0.7"
+  distance="5">
+</a-light>
+
+
+<!-- 海中に漂う光の粒 -->
+
+<!-- 海中を漂う光の粒1 -->
+<a-sphere position="-4 1 -4"
+  radius="0.035"
+  material="color: #8AF5FF; emissive: #8AF5FF; emissiveIntensity: 1"
+  animation="property: position; to: -3.8 3 -4.5; dur: 5000; dir: alternate; loop: true">
+</a-sphere>
+
+<!-- 光の粒2 -->
+<a-sphere position="2 2 -6"
+  radius="0.04"
+  material="color: #8AF5FF; emissive: #8AF5FF; emissiveIntensity: 1"
+  animation="property: position; to: 2.5 3.5 -6; dur: 6500; dir: alternate; loop: true">
+</a-sphere>
+
+<!-- 光の粒3 -->
+<a-sphere position="4 1 -10"
+  radius="0.03"
+  material="color: #A78BFA; emissive: #A78BFA; emissiveIntensity: 1"
+  animation="property: position; to: 3.5 2.5 -10; dur: 4500; dir: alternate; loop: true">
+</a-sphere>
+
+<!-- 光の粒4 -->
+<a-sphere position="-1 3 -9"
+  radius="0.025"
+  material="color: #8AF5FF; emissive: #8AF5FF; emissiveIntensity: 1"
+  animation="property: position; to: -1.5 1.5 -8.5; dur: 7000; dir: alternate; loop: true">
+</a-sphere>
+
+<!-- 光の粒5 -->
+<a-sphere position="5 2 -5"
+  radius="0.04"
+  material="color: #8AF5FF; emissive: #8AF5FF; emissiveIntensity: 1"
+  animation="property: position; to: 4.5 3 -5.5; dur: 5500; dir: alternate; loop: true">
+</a-sphere>
+
+<!-- 光の粒6 -->
+<a-sphere position="-5 2 -8"
+  radius="0.03"
+  material="color: #A78BFA; emissive: #A78BFA; emissiveIntensity: 1"
+  animation="property: position; to: -4.5 3.5 -8; dur: 6000; dir: alternate; loop: true">
+</a-sphere>
+
+
+
+<!-- 視点 -->
+<a-camera position="0 1.6 0"
+  look-controls="magicWindowTrackingEnabled: true">
+
+<!-- タイトル -->
+<a-entity position="0 0.65 -2.5"
+  text="value: DEEP SEA MUSEUM; align: center; color: #8AF5FF; width: 4; font: roboto">
+</a-entity>
+
+<!-- サブタイトル -->
+<a-entity position="0 0.42 -2.5"
+  text="value: UNKNOWN WORLD OF THE OCEAN; align: center; color: #D5F8FF; width: 2.8">
+</a-entity>
+
+<!-- 展示案内 -->
+<a-entity position="0 -0.65 -2.5"
+  text="value: LOOK AROUND AND EXPLORE!; align: center; color: #BCEAF5; width: 3.2">
+</a-entity>
+
+</a-camera>
